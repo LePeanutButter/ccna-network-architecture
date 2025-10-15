@@ -48,6 +48,52 @@ The network is divided into multiple VLANs to segment traffic and improve securi
 
 For the WAN simulation, serial links were configured between the routers. These links are essential for simulating communication between remote sites and are part of the OSPF configuration.
 
-### Conclusion
+## Application Layer Protocols and Physical Layer Standards in Network Infrastructures
 
-This project demonstrates the practical application of OSPF in a simulated network environment. By following the provided files, users can replicate the setup and observe the effects of OSPF on network performance, routing efficiency, and scalability.
+This section documents the **Packet Tracer simulations** developed for the _Application Layer Protocols and Physical Layer Standards in Network Infrastructures_ lab.
+The goal was to integrate and analyze **application-layer protocols (DNS, HTTP, FTP, Email, NTP)** within a multi-domain network topology, and to link these logical configurations with physical-layer standards such as **UTP cabling, RJ-45 connectors**, and **patch panel wiring.**
+
+### Overview
+
+Two independent implementations were developed, both representing complete multi-domain academic networks for the “Facultad de Sistemas, Civil y Eléctrica” (Systems, Civil, and Electrical programs):
+
+1. **Santiago’s Implementation**
+   Filename: `campus-network-santiago-implementation.pkt`  
+   A full deployment of a multi-domain network with configured DNS, HTTP, FTP, and Email services.
+   The simulation includes dynamic testing through PDU inspection and protocol encapsulation tracking, ensuring correct operation across all OSI layers.
+
+2. **Natalia’s Implementation**
+   Filename: `campus-network-natalia-implementation.pkt`  
+   A complementary implementation focusing on DNS resolution, HTTP and FTP service configuration, and email communication within and between domains.
+   Includes visual verification using Simulation Mode, ICMP ping testing, and service validation via built-in browser and email client tools.
+
+### Network Design Summary
+
+Both network designs share a similar logical structure and domain hierarchy:
+
+- **Domains configured:** `sistemas.com`, `civil.com`, `electrica.com`
+- **Services included:**
+  - **DNS** — Forward resolution for A, CNAME, and MX records.
+  - **HTTP** — Custom HTML pages hosted in each department’s web server.
+  - **Email (SMTP/POP3)** — Domain-specific accounts for intra- and inter-domain communication.
+  - **FTP** — File transfer service with read/write permissions and user authentication.
+  - **NTP** — Time synchronization simulated across Solaris and Slackware clients.
+- **Connectivity testing:** Conducted via `ping`, `telnet`, and simulated PDU analysis to visualize the encapsulation sequence through all seven OSI layers.
+
+### Physical Layer Integration
+
+Each logical design also includes references to physical connectivity and structured cabling:
+
+- **Straight-through and cross-over cables** (T568A/T568B) for LAN and inter-switch connections.
+- **Patch panel mapping and verification** for switch interlinks.
+- **Cabling simulation** using Copper Straight-Through and Copper Cross-Over in Packet Tracer.
+
+This ensures a cohesive understanding of how physical standards interact with application-level configurations in real-world infrastructures.
+
+### Results and Learning Outcomes
+
+- Successful integration of **multi-service, multi-domain environments** within Packet Tracer.
+- Demonstrated understanding of **application protocols (HTTP, DNS, FTP, Email, NTP)** and their interactions.
+- Clear linkage between **logical network design** and **physical layer implementation.**
+- Hands-on validation of **protocol encapsulation, service resolution, and inter-domain communication.**
+- Reinforcement of **structured cabling knowledge** aligned with TIA/EIA standards.

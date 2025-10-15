@@ -145,3 +145,62 @@ The lab successfully integrated **DNS services** and **scripting automation**:
 - DNS was configured and validated across Solaris, Slackware, and Windows Server, with custom domains and record management.
 - Shell and PowerShell scripts automated system tasks, demonstrating portability and robust error handling.
 - Tools such as **nslookup** and **dig** were used to diagnose and verify DNS functionality.
+
+---
+
+## Application Layer Protocols and Physical Layer Standards in Network Infrastructures
+
+This section documents the integration of **application-layer protocols** and **physical-layer standards** in academic and simulated environments, combining **logical network design** with **hands-on physical implementation.**
+
+It expands on DNS and service configuration through **Packet Tracer**, **Wireshark**, and **real cabling practices**, providing a comprehensive view from simulation to real-world infrastructure.
+
+### Application Layer Protocols
+
+Using **Cisco Packet Tracer**, multiple services were configured and analyzed:
+
+- **DNS, HTTP, FTP, and Email** services across different domains (`sistemas.com`, `civil.com`, `electrica.com`), ensuring name resolution, web hosting, file transfer, and inter-domain email communication.
+- Validation through **PDU simulation** to observe encapsulation and OSI-layer behavior.
+- Service testing using **PING**, **HTTP browsing**, and **FTP/TELNET sessions**, highlighting communication at layers 4–7.
+
+Each service was verified with both **domain names** and **IP-based requests**, demonstrating proper DNS integration and HTTP response headers (e.g., `200 OK`, `Content-Type`, `Host`, etc.).
+
+FTP operations included **file upload/download**, using user authentication and permission management.
+
+### Network Traffic Analysis with Wireshark
+
+Wireshark was employed to capture **real network traffic**, including HTTP, DHCP, and Telnet sessions:
+
+- Detailed inspection of **TCP handshakes** and **HTTP request/response** exchanges.
+- Observation of **DHCP Discover–Offer–Request–ACK** sequences.
+- Manual **HTTP requests via Telnet**, highlighting differences between raw text-based requests and browser-managed transactions.
+- Visualization of HTTP 200 responses and content-type differentiation (`text/html`, `application/pdf`, `image/png`).
+
+These captures illustrated how **application-layer data** is transported and visualized differently depending on the client (e.g., raw Telnet vs. browser).
+
+### DNS Record Analysis and Real-World Domain Inspection
+
+Using **CentralOps.net**, DNS and WHOIS data were analyzed for several domains:
+
+- **escuelaing.edu.co** → internal DNS infrastructure and LACNIC-assigned IP ranges.
+- **jbb.gov.co** → hybrid configuration using GoDaddy and Microsoft Azure DNS.
+- **google.com** → multi-redundant, globally distributed infrastructure managed by Google LLC.
+- **lufthansa.com** → DNSSEC-enabled corporate domain hosted on Microsoft Azure.
+
+Each analysis detailed domain creation dates, TTLs, registrars, IP ranges, and ownership information, strengthening understanding of **global DNS hierarchy and security practices.**
+
+### NTP Synchronization and Physical Layer Standards
+
+The lab concluded with **Network Time Protocol (NTP)** configuration on Solaris and Slackware systems, enabling clock synchronization across multi-platform environments.
+In the **physical layer**, students practiced structured cabling with **UTP Cat5e/6, RJ-45 connectors**, and **patch panel termination**, following **T568A/T568B wiring standards.**
+
+Hands-on crimping, continuity testing, and inspection of campus structured cabling systems complemented the logical network simulations, bridging conceptual and physical aspects of networking.
+
+### Results and Learning Outcomes
+
+This lab reinforced both **logical network design** and **physical infrastructure deployment** skills:
+
+- Complete implementation of **application-layer protocols** in simulated networks.
+- Real-world validation of **HTTP, DNS, FTP, DHCP, and NTP** traffic.
+- Integration of **DNS resolution, email, and web services** under unified domain management.
+- Practical exposure to **structured cabling standards** and **physical connectivity verification.**
+- Cross-analysis between **simulation (Packet Tracer)** and **real-world network traces (Wireshark).**
